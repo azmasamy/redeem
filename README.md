@@ -19,7 +19,7 @@ The users can see all available services and choose to subscribe for a month. Du
 - `subscribe` with an attached near amount of 10N which is the subscribtion fees.
 - `getSubscribers` lists all the subscribers.
 - `getActiveSubscribers` lists all subscribers that have unexpired subscribtion.
-- `redeem` redeems a service. required parameter is (serviceId). which you can get by viewing the available services i.e. `getAvailableServices`.
+- `redeem` redeems a service and sends the profit to the provider. required parameter is (serviceId). which you can get by viewing the available services i.e. `getAvailableServices`.
 
 
 ## Runing the sample validation contract
@@ -59,11 +59,7 @@ Run this to view all subscribers in the state and also view all subscribers who 
 
 
 - `./scripts/6-redeem.sh`
-Run this to redeem an available (unexpired) service. don't forget to change the `--accountId` to the near account you used to subscribe to the contract.
-
-
-- `./scripts/3-list-services.sh`
-Run this again to view changes to the service `redeemCount`.
+Run this to redeem an available (unexpired) service and send the profit to the service provider. don't forget to change the `--accountId` to the near account you used to subscribe to the contract. Notice the increment of `redeemCount`.
 
 
 - `./scripts/5-list-subs.sh`
